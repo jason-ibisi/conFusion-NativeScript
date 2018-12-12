@@ -20,3 +20,36 @@ refer to http://docs.nativescript.org/ui/theme.
 .no-border {
     border-width: 0;
 }
+
+.sidedrawer-left {
+    background-color: #D1C4E9;
+}
+
+.sidedrawer-header {
+    background-color: #512DA8;
+}
+
+.sidedrawer-header .sidedrawer-header-image {
+    background-color: #512DA8;
+    margin: 10;
+}
+
+.sidedrawer-header .sidedrawer-header-brand {
+    color: #ffffff;
+    font-size: 30;
+}
+
+.sidedrawer-list-item {
+    padding-left: 15;
+    color: black;
+}
+
+.sidedrawer-list-item-text {
+    font-size: 20;
+    border-width: 0;
+}
+
+.selected {
+    background-color: #B39DDB;
+    color: blue;
+}

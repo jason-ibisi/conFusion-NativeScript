@@ -1,2 +1,20 @@
 <!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
-<page-router-outlet></page-router-outlet>
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+    <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer sidedrawer-left">
+        <GridLayout row="0" class="sidedrawer-header" rows="auto" columns="100, *">
+            <Image row="0" col="0" src="~/images/logo.png" class="sidedrawer-header-image"></Image>
+            <Label row="0" col="1" text="Ristorante Con Fusion" class="sidedrawer-header-brand" textWrap="true"></Label>
+        </GridLayout>
+
+        <ScrollView row="1">
+            <StackLayout class="sidedrawer-content">
+                <GridLayout columns="auto" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/menu')"
+                    (tap)="onNavItemTap('/menu')">
+                    <Label col="1" text="Menu" class="sidedrawer-list-item-text"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
+    <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>
