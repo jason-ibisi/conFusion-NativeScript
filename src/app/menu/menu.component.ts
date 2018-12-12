@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.dishService.getDishes()
       .subscribe(dishes => this.dishes = dishes, 
-          errMsg => this.errMsg = errMsg);
+          errMsg => this.errMsg = <any>errMsg);
   }
 
 }

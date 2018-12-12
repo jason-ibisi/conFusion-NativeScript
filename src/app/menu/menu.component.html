@@ -3,7 +3,7 @@
 <StackLayout class="page">
     <ListView [items]="dishes" (loaded)="onLoaded(event)" (itemLoading)="onItemLoading(event)" (itemTap)="onItemTap(event)" class="list-group" *ngIf="dishes">
         <ng-template let-dish="item" let-odd="odd" let-even="even">
-          <StackLayout orientation="horizontal" class="list-group-item">
+          <StackLayout orientation="horizontal" class="list-group-item" [nsRouterLink]="['/dishdetail', dish.id]">
             <Image row="0" col="0" rowSpan="2" height="108" width="108" [src]="BaseURL + dish.image"
                 class="thumb p-16"></Image>
             <GridLayout class="list-group-item" rows="auto *" columns="*">
